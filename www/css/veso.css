@@ -5,7 +5,7 @@
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family:"Lato","Helvetica Neue",Arial,sans-serif;
+	font-family:"Roboto","Helvetica Neue",Arial,sans-serif;
 	vertical-align: baseline;
 	outline: none;
 	font-size-adjust: none;
@@ -32,7 +32,7 @@ body{
 	padding:0;
 	line-height:18px;
 	overflow-x:hidden;
-	font-family:"Lato","Helvetica Neue",Arial,sans-serif;
+	font-family:"Roboto","Helvetica Neue",Arial,sans-serif;
 	font-size:14px;
 	line-height:1.42857;
 	background-image:url(../img/body-bg.png);
