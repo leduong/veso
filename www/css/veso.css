@@ -88,9 +88,9 @@ header .btn-nav{
 	width:45px;
 	height:45px;
 	display:block;
-	padding:7px 0 0 7px;
+	padding:3px 0 0 7px;
 	color:#FFFFFF;
-	font-size:21pt;
+	font-size:18pt;
 }
 header .btn-nav:hover{
 	color:#db1515;
@@ -98,11 +98,11 @@ header .btn-nav:hover{
 }
 header .btn-nav.bars{
 	left:0;
-	padding:8px 0 0 10px;
+	padding:4px 0 0 10px;
 }
 header .btn-nav.globe{
 	right:0;
-	padding:7px 0 0 12px;
+	padding:3px 0 0 12px;
 }
 header .btn-nav.comments{
 	right:45px;
