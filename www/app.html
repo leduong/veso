@@ -13,41 +13,42 @@
 		Vé số
 		</title>
 		<!-- Stylesheet Load -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,vietnamese" rel="stylesheet" type="text/css">
 		<link href="css/normalize.css" rel="stylesheet" type="text/css">
 		<link href="css/icon.css" rel="stylesheet" type="text/css">
 		<link href="css/veso.css" rel="stylesheet" type="text/css">
 	</head>
 	<body ng-app="App">
-		<header du-header="" ng-class="{'active': isMenu}"></header>
-		<div class="loading" ng-show="isLoading">
-			<span class="icon icon-spinner icon-spin icon-2x"></span> đang tải dữ liệu...
+	<header du-header="" ng-class="{'active': isMenu}"></header>
+	<div class="loading" ng-show="isLoading">
+		<span class="icon icon-spinner icon-spin icon-2x"></span> đang tải dữ liệu...
+	</div>
+	<div class="flash" ng-show="flash.msg">
+		<div class="alert alert-dismissable alert-{{flash.type}}" ng-click="flash.msg = ''">
+			<button type="button" class="close" ng-bind="'&times;'"></button>
+			<div ng-bind-html="flash.msg"></div>
 		</div>
-		<div class="flash" ng-show="flash.msg">
-			<div class="alert alert-dismissable alert-{{flash.type}}" ng-click="flash.msg = ''">
-				<button type="button" class="close" ng-bind="'&times;'"></button>
-				<div ng-bind-html="flash.msg"></div>
-			</div>
-		</div>
-		<div class="page-main">
-			<div class="page-content am-fade-up" ng-view=""></div>
-		</div>
-		<aside side-bar="" class="ng-hide am-slide-left" ng-show="isMenu"></aside>
-		<scrolltop></scrolltop>
-	</body>
-	<!--Page Scripts Load -->
-	<script src="js/veso.vendor.js"></script>
-	<script src="js/veso.js"></script>
-	<script type="text/javascript">
-	  WebFontConfig = {
-	    google: { families: [ 'Roboto::latin,vietnamese' ] }
-	  };
-	  (function() {
-	    var wf = document.createElement('script');
-	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	    wf.type = 'text/javascript';
-	    wf.async = 'true';
-	    var s = document.getElementsByTagName('script')[0];
-	    s.parentNode.insertBefore(wf, s);
-	  })();
-	 </script>
+	</div>
+	<div class="page-main">
+		<div class="page-content am-fade-up" ng-view=""></div>
+	</div>
+<aside side-bar="" class="ng-hide am-slide-left" ng-show="isMenu"></aside>
+<scrolltop></scrolltop>
+</body>
+<!--Page Scripts Load -->
+<script src="js/veso.vendor.js"></script>
+<script src="js/veso.js"></script>
+<script type="text/javascript">
+	WebFontConfig = {
+	google: { families: [ 'Roboto::latin,vietnamese' ] }
+	};
+	(function() {
+	var wf = document.createElement('script');
+	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+	})();
+</script>
 </html>
