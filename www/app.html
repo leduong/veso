@@ -13,7 +13,11 @@
 		Vé số
 		</title>
 		<!-- Stylesheet Load -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,vietnamese" rel="stylesheet" type="text/css">
+		<style type="text/css" media="screen">
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+		  display: none !important;
+		}
+		</style>
 		<link href="css/normalize.css" rel="stylesheet" type="text/css">
 		<link href="css/icon.css" rel="stylesheet" type="text/css">
 		<link href="css/veso.css" rel="stylesheet" type="text/css">
@@ -40,8 +44,8 @@
 <script src="js/veso.js"></script>
 <script type="text/javascript">
 	WebFontConfig = {
-	google: { families: [ 'Roboto::latin,vietnamese' ] }
-	};
+    	google: { families: [ 'Roboto:400,700:latin,vietnamese' ] }
+ 	};
 	(function() {
 	var wf = document.createElement('script');
 	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
