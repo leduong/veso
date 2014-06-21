@@ -6,22 +6,7 @@ table{
 	width:100%;
 	clear:both;
 	margin-bottom:27px;
-	font-size: 14px;
-}
-th{
-	vertical-align:middle;
-	text-align:center;
-	border-bottom:1px solid #dddddd;
-	border-right:1px solid #dddddd;
-	font-weight:bold;
-	color:#555;
-}
-thead th{
-	color: red;
-	padding: 9px 0;
-}
-tbody th{
-	padding: 4px 0;
+	font-size: 14pt;
 }
 tr{
 	line-height:18px;
@@ -30,10 +15,15 @@ td{
 	border-right:1px solid #dddddd;
 	border-bottom:1px solid #dddddd;
 	text-align:center;
-	padding-top:4px;
-	padding-bottom:4px;
+	padding: 4px 0;
 	line-height:18px;
 	vertical-align:middle;
+	font-size: 14px;
+}
+thead td{
+	color: red;
+	padding: 9px 0;
+	font-size: 14pt;
 }
 td.left, td.right, td.center{
 	padding-left: 4px; padding-right: 4px;
