@@ -19,6 +19,7 @@
 		}
 		</style>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/weather-icons.min.css">
 		<link rel="stylesheet" href="css/veso.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
@@ -26,21 +27,27 @@
 		<div data-ng-controller="AppCtrl">
 			<div data-ng-hide="isSpecificPage()" data-ng-cloak="" class="no-print">
 				<section data-ng-include=" 'html/header.html' " id="header" class="top-header"></section>
-
 				<aside data-ng-include=" 'html/nav.html' " id="nav-container"></aside>
 			</div>
 
 			<div class="view-container">
 				<section data-ng-view="" id="content" class="animate-fade-up"></section>
 			</div>
-			<div class="loading" ng-hide="!isLoading">
+			<div class="loading" ng-show="isLoading">
 				<span class="fa fa-spinner fa-spin fa-2x"></span> đang tải dữ liệu...
 			</div>
+			<div class="flash" ng-show="flash.msg">
+				<div class="alert alert-dismissable alert-{{flash.type}}" ng-click="flash.msg = ''">
+					<button type="button" class="close" ng-bind="'&times;'"></button>
+					<div ng-bind-html="flash.msg"></div>
+				</div>
+			</div>
+			<scrolltop></scrolltop>
 		</div>
 	</body>
 	<!--Page Scripts Load -->
 	<script src="js/veso.vendor.js"></script>
-	<script src="js/veso.min.js"></script>
+	<script src="js/veso.js"></script>
 	<script type="text/javascript">
 		WebFontConfig = {
 		google: { families: [ 'Roboto:400,700:latin,vietnamese' ] }

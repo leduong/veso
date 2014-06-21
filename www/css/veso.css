@@ -10,11 +10,11 @@ table{
 }
 th{
 	vertical-align:middle;
+	text-align:center;
 	border-bottom:1px solid #dddddd;
 	border-right:1px solid #dddddd;
 	font-weight:bold;
 	color:#555;
-	text-align:center;
 }
 thead th{
 	color: red;
