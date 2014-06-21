@@ -15,44 +15,43 @@
 		<!-- Stylesheet Load -->
 		<style type="text/css" media="screen">
 			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
-		  display: none !important;
+		display: none !important;
 		}
 		</style>
-		<link href="css/normalize.css" rel="stylesheet" type="text/css">
-		<link href="css/icon.css" rel="stylesheet" type="text/css">
-		<link href="css/veso.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/veso.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body ng-app="App">
-	<header du-header="" ng-class="{'active': isMenu}"></header>
-	<div class="loading" ng-show="isLoading">
-		<span class="icon icon-spinner icon-spin icon-2x"></span> đang tải dữ liệu...
-	</div>
-	<div class="flash" ng-show="flash.msg">
-		<div class="alert alert-dismissable alert-{{flash.type}}" ng-click="flash.msg = ''">
-			<button type="button" class="close" ng-bind="'&times;'"></button>
-			<div ng-bind-html="flash.msg"></div>
+	<body ng-app="App" id="app" data-custom-background="" data-off-canvas-nav="">
+		<div data-ng-controller="AppCtrl">
+			<div data-ng-hide="isSpecificPage()" data-ng-cloak="" class="no-print">
+				<section data-ng-include=" 'html/header.html' " id="header" class="top-header"></section>
+
+				<aside data-ng-include=" 'html/nav.html' " id="nav-container"></aside>
+			</div>
+
+			<div class="view-container">
+				<section data-ng-view="" id="content" class="animate-fade-up"></section>
+			</div>
+			<div class="loading" ng-hide="!isLoading">
+				<span class="fa fa-spinner fa-spin fa-2x"></span> đang tải dữ liệu...
+			</div>
 		</div>
-	</div>
-	<div class="page-main">
-		<div class="page-content am-fade-up" ng-view=""></div>
-	</div>
-<aside side-bar="" class="ng-hide am-slide-left" ng-show="isMenu"></aside>
-<scrolltop></scrolltop>
-</body>
-<!--Page Scripts Load -->
-<script src="js/veso.vendor.js"></script>
-<script src="js/veso.js"></script>
-<script type="text/javascript">
-	WebFontConfig = {
-    	google: { families: [ 'Roboto:400,700:latin,vietnamese' ] }
- 	};
-	(function() {
-	var wf = document.createElement('script');
-	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	wf.type = 'text/javascript';
-	wf.async = 'true';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(wf, s);
-	})();
-</script>
+	</body>
+	<!--Page Scripts Load -->
+	<script src="js/veso.vendor.js"></script>
+	<script src="js/veso.js"></script>
+	<script type="text/javascript">
+		WebFontConfig = {
+		google: { families: [ 'Roboto:400,700:latin,vietnamese' ] }
+		};
+		(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
 </html>
