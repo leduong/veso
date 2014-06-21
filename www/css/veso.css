@@ -44,48 +44,6 @@ th.left, th.right, th.center{
 tr:hover > td{
 
 }
-ul{
-	margin-bottom: 10px;
-}
-ul li{
-	margin-bottom: 5px;
-	font-size: 11pt;
-}
-/* Scroll Top */
-.scroll-top {
-	background-color: #262728;
-	background-color: rgba(0, 0, 0, 0.3);
-	color: #fff;
-	font-size: 18px;
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
-	display: none;
-	overflow: hidden;
-	z-index: 1000;
-	border-radius: 20px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
-	background-clip: padding-box;
-
-	-webkit-transition: background 0.3s ease-in-out;
-	-moz-transition: background 0.3s ease-in-out;
-	-o-transition: background 0.3s ease-in-out;
-	-ms-transition: background 0.3s ease-in-out;
-	transition: background 0.3s ease-in-out;
-}
-
-.scroll-top:hover,.scroll-top:focus {
-	background-color: #1d1d1d;
-	background-color: rgba(0, 0, 0, 0.5);
-	color: #fff;
-	text-decoration: none;
-}
 
 .flash, .loading{
 	z-index:999999;
