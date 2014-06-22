@@ -38,7 +38,7 @@ tr:hover > td{
 .flash, .loading{
 	z-index:999999;
 	position: fixed;
-	top: 0;
+	top: 50px;
 	left: 0;
 	padding: 10px;
 	width:100%;
@@ -47,16 +47,6 @@ tr:hover > td{
 	text-align: center;
 	background: #efefef;
 	border-bottom: 1px solid #dddddd;
-}
-.page-main{
-	clear: both;
-	margin-top: 45px;
-}
-.page-content{}
-.page-content .loading{
-	position: relative;
-	top: none !important;
-	left: none !important;
 }
 
 .container{
