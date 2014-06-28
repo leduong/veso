@@ -38,12 +38,15 @@ tr:hover > td{
 .flash, .loading{
 	z-index:999999;
 	position: fixed;
-	top: 50px;
 	left: 0;
 	padding: 10px;
 	width:100%;
 }
+.flash {
+	top: 0px;
+}
 .loading {
+	top: 50px;
 	text-align: center;
 	background: #efefef;
 	border-bottom: 1px solid #dddddd;

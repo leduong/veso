@@ -5,7 +5,7 @@
 		<meta content="" name="keywords">
 		<meta content="" name="description">
 		<!--Declare page as mobile friendly -->
-		<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+		<meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" name="viewport">
 		<!-- Declare page as iDevice WebApp friendly -->
 		<meta content="yes" name="apple-mobile-web-app-capable">
 		<!-- Page Title -->
@@ -35,18 +35,12 @@
 			<div class="loading" ng-show="isLoading">
 				<span class="fa fa-spinner fa-spin fa-2x"></span> đang tải dữ liệu...
 			</div>
-			<div class="flash" ng-show="flash.msg">
-				<div class="alert alert-dismissable alert-{{flash.type}}" ng-click="flash.msg = ''">
-					<button type="button" class="close" ng-bind="'&times;'"></button>
-					<div ng-bind-html="flash.msg"></div>
-				</div>
-			</div>
-			<scrolltop></scrolltop>
+			<div class="flash" ng-include="'html/flash.html'"></div>
 		</div>
 	</body>
 	<!--Page Scripts Load -->
 	<script src="js/veso.vendor.js"></script>
-	<script src="js/veso.min.js"></script>
+	<script src="js/veso.js"></script>
 	<script type="text/javascript">
 		WebFontConfig = {
 		google: { families: [ 'Roboto:400,700:latin,vietnamese' ] }
